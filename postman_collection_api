@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "7a4d8f79-04d0-47ec-b172-16f5409f75cd",
+		"name": "crud-api-mongodb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37556851"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/test/66bbb92407ecd9ed01cbbde6",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"test",
+						"66bbb92407ecd9ed01cbbde6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"esses daqui são para teste\",\r\n    \"title\": \"dados para teste\",\r\n    \"priority\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/test",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"esses daqui são para teste\",\r\n    \"title\": \"dados para teste\",\r\n    \"priority\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/test/66bbb92407ecd9ed01cbbde6",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"test",
+						"66bbb92407ecd9ed01cbbde6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/test/66bbb92407ecd9ed01cbbde6",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"test",
+						"66bbb92407ecd9ed01cbbde6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
